@@ -1,0 +1,355 @@
+/* TABLE OF CONTENTS */
+
+
+/*
+    1. GENERAL STYLES
+    2. LOGO & NAVIGATION
+    3. BANNER
+    4. CONTENT
+    5. ARTICLES
+    6. ASIDE
+    7. FOOTER
+    8. MEDIA QUERIES
+    
+*/
+
+
+/* 1. GENERAL STYLES */
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 935px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+    margin: 0;
+}
+
+::selection {
+    background-color: #dab159;
+    color: white;
+}
+
+img {
+    -webkit-user-drag: none;
+    -o-user-drag: none;
+    -moz-user-drag: none;
+    user-drag: none;
+}
+
+
+/* 2. LOGO & NAVIGATION */
+
+.header-wrapper {
+    background-image: url("images/top-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 100%;
+}
+
+.navigation-wrapper {
+    position: relative;
+    img[alt="Logo"] {
+        position: relative;
+        z-index: 2;
+    }
+    img[alt="Lamp"] {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: auto;
+        left: auto;
+        right: 0;
+    }
+}
+
+.navigation {
+    button {
+        background-color: #381804;
+        margin-right: 0;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        span {
+            background-color: #a55c1e;
+        }
+    }
+    nav {
+        position: relative;
+    }
+    #menu {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center top;
+        box-shadow: none;
+        background-color: #fdf3b8;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+    }
+    ul {
+        li {
+            float: none;
+            padding-left: 35px;
+            a {
+                padding: 0;
+                margin-bottom: 10px;
+                &:link,
+                &:visited,
+                &:hover,
+                &:active {
+                    color: #4a4a4a;
+                    font: italic 700 18px / 30px 'Times New Roman';
+                    text-decoration: none;
+                    background-color: transparent;
+                }
+                &.nav-active:link,
+                &.nav-active:visited,
+                &.nav-active:hover,
+                &.nav-active:active {
+                    color: #8a5705;
+                    font: italic 700 18px / 30px 'Times New Roman';
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 17px;
+                    height: 15px;
+                    background-image: url(images/menu-bullet.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    top: 50%;
+                    left: -25px;
+                    right: auto;
+                    transform: translateY(-50%);
+                }
+                &.nav-active:before {
+                    background-image: url(images/menu-active-bullet.png);
+                }
+            }
+        }
+    }
+}
+
+
+/* 3. BANNER */
+
+.banner {
+    background-image: url(images/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 10px 12px 22px 12px;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 59px;
+        height: 49px;
+        background-image: url("images/banner-cable-bg.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: auto;
+        bottom: 15px;
+        left: auto;
+        right: -45px;
+    }
+    img {
+        width: 100%;
+    }
+    ol {
+        width: 50px;
+        position: absolute;
+        z-index: 4;
+        right: 2px;
+        left: auto;
+        top: auto;
+        bottom: -13px;
+        li {
+            border: none;
+            background-color: rgba(234, 234, 233, 0.5);
+            &.active {
+                background-color: #b8671e;
+            }
+        }
+    }
+}
+
+
+/* 4. CONTENT */
+
+.content-wrapper {
+    background-image: url("images/middle-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.content {
+    padding: 28px 5px 45px 5px;
+    /* 5. ARTICLES */
+    article {
+        margin-bottom: 46px;
+        .title {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        h3 {
+            color: #471f11;
+            font: 700 24px / 23.2px 'Times New Roman';
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            transform: translateY(-50%);
+            text-shadow: 0px 1px 0px rgba(255, 253, 247, 0.26);
+            span {
+                color: #7c421b;
+                font: 700 24px / 23.2px Arial;
+            }
+        }
+        p {
+            color: #000000;
+            font: 400 12px / 18px Arial;
+            text-shadow: 0px 1px 0px rgba(255, 253, 247, 0.26);
+        }
+    }
+    /* 6. ASIDE */
+    aside {
+        background-image: url("images/aside-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        text-align: center;
+        padding: 52px 43px 73px 43px;
+        h2 {
+            color: #c9b68c;
+            font: italic 700 26px / 23.2px 'Times New Roman';
+        }
+        img.special {
+            margin: 12px 0;
+            width: 100%;
+        }
+        .carousel-control {
+            background: none;
+            opacity: 1;
+            height: 18px;
+            width: 22px;
+            position: absolute;
+            top: auto;
+            left: auto;
+            bottom: -14px;
+            &.left {
+                right: 32px;
+            }
+            &.right {
+                right: 0;
+            }
+        }
+    }
+}
+
+
+/* 7. FOOTER */
+
+.footer-wrapper {
+    background-image: url("images/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+}
+
+footer {
+    text-align: center;
+    margin: 42px 5px 72px 5px;
+    .spacer {
+        margin: 0 10px;
+    }
+    h5 {
+        color: #5a5343;
+        font: 400 12px / 19.2px Arial;
+        position: relative;
+        z-index: 1;
+        a,
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #988c6d;
+            text-decoration: none;
+        }
+    }
+    .footer-copy {
+        background-image: url("images/footer-copy-bg.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        padding: 15px 0;
+        &:before {
+            content: "";
+            width: 82px;
+            height: 55px;
+            position: absolute;
+            background-image: url("images/footer-coffee.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: 0;
+            right: auto;
+            top: 0;
+            bottom: auto;
+            z-index: 0;
+        }
+        &:after {
+            content: "";
+            width: 78px;
+            height: 62px;
+            position: absolute;
+            background-image: url("images/footer-cups.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            right: 0;
+            left: auto;
+            top: -10px;
+            bottom: auto;
+            z-index: 0;
+        }
+    }
+}
+
+
+/* 8. MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        #menu {
+            background-image: url("images/menu-bg.png");
+            background-color: transparent;
+            border-radius: 0px;
+            position: static !important;
+            padding: 22px 20px 60px 73px;
+        }
+        ul {
+            li {
+                padding-left: 0;
+            }
+        }
+    }
+    .content {
+        padding-bottom: 0;
+    }
+}
